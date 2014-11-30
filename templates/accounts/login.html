@@ -1,8 +1,15 @@
+{% load staticfiles %}
 
-<form action="/login/">
-	<label for="username">Имя пользователя</label>
-	<input type="text" name="username">
-	<label for="password">Пароль</label>
-	<input type="password" name="password">
-	<button type="submit">Войти</button>
-</form>
+  <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'style/signin.css' %}">
+
+  <div class="container">
+    <form class="form-signin" action="/login/">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <label for="username" class="sr-only">Имя пользователя</label>
+      <input type="text" name="username" class="form-control" placeholder="Имя пользователя" required autofocus>
+      <label for="password" class="sr-only">Пароль</label>
+      <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    </form>
+  </div>
